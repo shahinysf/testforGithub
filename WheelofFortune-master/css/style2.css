@@ -1,0 +1,277 @@
+/* font-family: 'Permanent Marker', cursive; */
+/* font-family: 'Kalam', cursive; */
+/* font-family: 'Luckiest Guy', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+html {
+    background-image: url("../img/background2.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+  
+
+body {
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 24px;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 20vw 1fr;
+    grid-template-rows: 1fr 1fr 20px 20vw 20px 1fr 1fr;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.top {
+    grid-area: 1 / 1 / 1 / 4;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+    background-color: darkblue;
+}
+
+#playBtn {
+    grid-area: 1 / 1 / 1 / 1;
+    font-family: 'Permanent Marker', cursive;
+    margin: 5px 5%;
+    padding: 5px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+#playBtn:hover, #exitBtn:hover {
+    background-color: rgb(255, 249, 159);
+    box-shadow: 0 0 25px rgb(255, 255, 255);
+}
+
+#scorebox {
+    grid-area: 1 / 2 / 1 / 3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+#roundbox {
+    grid-area: 1 / 3 / 1 / 4;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+#scoretext, #score, #roundtext, #roundscore {
+    color: white;
+    align-self: center;
+    text-align: center;
+}
+
+#exitBtn {
+    grid-area: 1 / 4 / 1 / 5;
+    justify-self: end;
+    font-family: 'Permanent Marker', cursive;
+    margin: 5px 5%;
+    padding: 5px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.top2 {
+    grid-area: 2 / 1 / 3 / 4;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#puzzleDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    padding-top: 10px;
+    text-align: center;
+    display: inline-block;
+    background-color: white;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.left {
+    grid-area: 3 / 1 / 6 / 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    image-rendering: pixelated;
+}
+ 
+.left-img {
+    width: 25vw;
+    max-width: 300px;
+}
+
+.right {
+    grid-area: 3 / 3 / 6 / 4;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    image-rendering: pixelated;
+}
+
+.right-img {
+    width: 18vw;
+    max-width: 250px;
+}
+
+.mid1 {
+    grid-area: 3 / 2 / 4 / 3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+#pointer {
+    justify-self: center;
+    width: 20px;
+    height: 20px;
+}
+
+.mid2 {
+    grid-area: 4 / 2 / 5 / 3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+#wheelDiv {
+    display: grid;
+    grid-area: 1 / 1 / 1 / 1;
+    width: 100%;
+    height: 100%;
+}
+
+#wheel {
+    width: 100%;
+}
+
+.mid3 {
+    grid-area: 5 / 2 / 6 / 3;
+    width: 100%;
+    height: 100%;
+}
+
+#spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#spinBtn {
+    font-family: 'Permanent Marker', cursive;
+    padding: 7px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 88px;
+    height: 88px;
+    text-align: center;
+    background-image: url("/img/pokeball.png");
+}
+
+.bottom1 {
+    grid-area: 6 / 1 / 7 / 4;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffd900; 
+}
+
+.abc {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border: 0px;
+    border-radius: 3px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+}
+
+.abc:hover {
+    background-color: yellow;
+}
+
+.abc:disabled {
+    background-color: #e2e2e2;
+}
+
+.hint {
+    width: 70px;
+    height: 30px;
+    margin: 5px;
+    border: 0px;
+    border-radius: 3px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    background-color: #ff6600;
+    color: #000000;
+}
+
+.hint:hover:enabled {
+    background-color: #000000;
+    color: #ff6600;
+}
+
+.reHint {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border: 0px;
+    border-radius: 3px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    background-color: #ff6600;
+}
+
+.bottom2 {
+    grid-area: 7 / 1 / 8 / 4;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+button:disabled {
+    color: #6d6d6d;
+}
