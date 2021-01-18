@@ -1,0 +1,8 @@
+library(mosaic)
+Server1Data <- read.delim("D:/CIT/Level 02/MATH-1350/week01&02/lab/Server1Data.txt", comment.char="#")
+setwd("D:/CIT/Level 02/MATH-1350/week01&02/lab")
+Server2Data <- read.delim("D:/CIT/Level 02/MATH-1350/week01&02/lab/Server2Data.txt", comment.char="#")
+mean(~Time, data=Server1Data)
+median(~Time, data=Server1Data)
+sd(~Time, data=Server1Data)
+var(~Time, data=Server1Data)
